@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Abar */
+
+@font-face {
+  font-family: "Abar";
+  src: url("/Abar%20FaNum/Webfonts/woff2/AbarHighFaNum-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Abar";
+  src: url("/Abar%20FaNum/Webfonts/woff2/AbarHighFaNum-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
 }
+
+@font-face {
+  font-family: "Abar";
+  src: url("/Abar%20FaNum/Webfonts/woff2/AbarHighFaNum-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Abar";
+  src: url("/Abar%20FaNum/Webfonts/woff2/AbarHighFaNum-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Abar";
+  src: url("/Abar%20FaNum/Webfonts/woff2/AbarHighFaNum-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+}
+
+/* Tailwind Theme */
+
+@theme {
+  --font-sans: "Abar", sans-serif;
+
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+
+  --background-image-gilma: linear-gradient(
+    321deg,
+    #02adf7 0%,
+    #26e05a 100%
+  );
+
+  --background-image-main: linear-gradient(
+    28deg,
+    #c5d8ff 0%,
+    #fafafa 96%,
+    #c5d8ff 100%
+  );
+}
+
+/* Global Styles */
 
 body {
-  background: var(--background);
+  font-family: "Abar", sans-serif !important;
+  font-weight: 600;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
 }
